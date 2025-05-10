@@ -1,0 +1,463 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Scroll Arrow Section */
+.scroll-arrow {
+    position: fixed;
+    right: 50px; /* Adjusted to move the arrow to the right middle */
+    bottom: 50%;
+    display: none;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+}
+
+.scroll-arrow:hover {
+    background-color: #34495e;
+}
+
+.semester-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between buttons */
+}
+
+.semester-buttons button {
+    flex: 1 1 calc(50% - 20px); /* Two columns with space between */
+    padding: 15px 25px;
+    font-size: 1.5rem; /* Adjusted for readability */
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#intro {
+    height: 100vh; /* Full-screen height */
+    background: linear-gradient(135deg, #ff00d4, #0099ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px; /* Consistent padding */
+}
+
+#intro .content {
+    max-width: 600px; /* Limit the content width */
+    margin-top: -20px;
+}
+
+#intro h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom:10px;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+#intro p {
+    font-size: clamp(1rem, 2vw, 3rem);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+
+/* Button Styles */
+button {
+    padding: 15px 30px;
+    position: relative;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #2575fc;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-3px); /* Slight upward motion on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Semesters Section */
+
+#semesters {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    background: linear-gradient(135deg, #000000, #68a0ffe7); /* Gradient background */
+    text-align: center;
+    color: #383636;
+}
+
+#semesters h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 10px;
+    margin-top: 5%;
+    color: #ffffff;
+}
+.semester-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Horizontal centering */
+    text-align: center;
+}
+
+.semester-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.semester-buttons button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    width: 180px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 👇 Add this below - Responsive Styles */
+@media (max-width: 768px) {
+    .semester-buttons button {
+        width: 140px;
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .semester-buttons {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .semester-buttons button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
+
+.semester-buttons button:hover {
+    background-color: #222;
+}
+
+/* Only apply top margin to buttons except the first one in each column */
+.column button:not(:first-child) {
+    margin-top: 30px;
+}
+
+.semester-buttons button:hover {
+    background-color: #00aecd;
+    transform: scale(1.05);
+}
+
+
+/* Semester 3 Section */
+#semester3 {
+    margin: 50px auto; /* Consistent spacing around the section */
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+}
+
+#semester3 h2 {
+    text-align: center;
+    color: #2d2d2d;
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+#semester3 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#semester3 li {
+    margin: 15px 0; /* Consistent spacing between items */
+}
+
+#semester3 li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#semester3 li a:hover {
+    color: #1f618d;
+}
+
+/* Semester 4 Section */
+#semester4 {
+    margin: 50px auto; /* Consistent spacing around the section */
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+}
+
+#semester4 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+#semester4 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#semester4 li {
+    margin: 15px 0; /* Consistent spacing between items */
+}
+
+#semester4 li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#semester4 li a:hover {
+    color: #1f618d;
+}
+
+/* Semester 5 Section */
+#semester5 {
+    margin: 50px auto; /* Consistent spacing around the section */
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+}
+
+#semester5 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+#semester5 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#semester5 li {
+    margin: 15px 0; /* Consistent spacing between items */
+}
+
+#semester5 li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#semester5 li a:hover {
+    color: #1f618d;
+}
+
+/* Semester 6 Section */
+#semester6 {
+    margin: 50px auto; /* Consistent spacing around the section */
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+}
+
+#semester6 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+#semester6 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#semester6 li {
+    margin: 15px 0; /* Consistent spacing between items */
+}
+
+#semester6 li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#semester6 li a:hover {
+    color: #1f618d;
+}
+
+/* Semester 7 Section */
+#semester7 {
+    margin: 50px auto; /* Consistent spacing around the section */
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ecf0f1;
+    border-radius:8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+}
+
+#semester7 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+#semester7 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#semester7 li {
+    margin: 15px 0; /* Consistent spacing between items */
+}
+
+#semester7 li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#semester7 li a:hover {
+    color: #1f618d;
+}
+
+/* Semester 8 Section */
+#semester8 {
+    margin: 50px auto; /* Consistent spacing around the section */
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+}
+
+#semester8 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+#semester8 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#semester8 li {
+    margin: 15px 0; /* Consistent spacing between items */
+}
+
+#semester8 li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#semester8 li a:hover {
+    color: #0056b3;
+}
+
+/* Basic styles for the accordion */
+.accordion {
+    background-color: #dfdcdc;
+    color: #1f1e1e;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.3s;
+    margin: 10px 0; /* Increased margin for more space between buttons */
+}
+
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .semester-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .column button {
+        margin-top: 0 !important;
+    }
+}

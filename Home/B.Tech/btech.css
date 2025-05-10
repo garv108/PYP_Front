@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f03b3b, #f5a3a3);
+    text-align: center;
+}
+header {
+    padding: 30px;
+    font-size: clamp(1rem, 3vw, 3rem);
+}
+.highlight {
+    font-weight: bold;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+nav ul {
+    font-size: clamp(70%, 1.45vw, 5rem);
+    list-style: none;
+    padding: 0;
+    margin: 1px 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px; /* Ensures the text background remains circular */
+    padding: 10px;
+}
+nav ul li {
+    font-size: 1.2em;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.content {
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.branch-btn {
+    background: #ff6699;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.branch-btn:hover {
+    transform: scale(1.1);
+}
+.additional-section {
+    margin-top: 20px;
+    padding: 30px;
+    background: linear-gradient(to bottom right, #f03b3b, #f5a3a3);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+h3 {
+    display: block;
+    font-size: 1.8em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9em;
+}

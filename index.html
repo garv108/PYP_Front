@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Welcome to <span>EduHub</span></h1>
+    <p>Your gateway to learning and success!</p>
+    <p>BE EXAM PROOF</p>
+  </header>
+  <!-- Hamburger Button -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#courses" onclick="closeMenu()">Courses</a></li>
+    <li><a href="#features" onclick="closeMenu()">Features</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    <li><a href="/Home/public/signup/signup.html" onclick="closeMenu()">Sign Up</a></li>
+    <li><a href="/Home/public/Login/login.html" onclick="closeMenu()">Login</a></li>
+  </ul>
+</nav>
+
+  
+  <main>
+    <section id="courses" class="courses">
+      <h2>Explore Our Courses</h2>
+      <div class="course-buttons">
+        <button onclick="location.href='Home/B.Tech/btech.html'">B.Tech</button>
+        <button onclick="location.href='Home/B.SC/bsc.html'">B.Sc</button>
+        <button onclick="location.href='Home/B.A/ba.html'">B.A</button>
+        <button onclick="location.href='Home/LLB/llb.html'">LL.B</button>
+  </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Comprehensive and easy-to-understand course material.</li>
+        <li>Interactive and engaging learning resources.</li>
+        <li>Expert Notes from qualified educators.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach out to us at <a href="mailto:garvpandya3@.com">support@educationalhub.com</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Educational Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

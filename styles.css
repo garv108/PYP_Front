@@ -1,0 +1,273 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    line-height: 1.8;
+    background-color: #f8f9fa; /* Light, neutral background */
+    color: #333; /* Dark text for contrast */
+    overflow-x: hidden;
+    font-size: clamp(14px, 1.5vw, 18px); /* Auto adjusts */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom right,#00aaff, #00ff5e); /* Soft pastel gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);    /* Responsive: min 2rem, 5vw scalable, max 3.5rem */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: font-size 0.3s ease;
+}
+
+header h1 span {
+    color: #333;
+    background: #ffffff;
+    padding: 6px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* subtle floating effect */
+    transition: all 0.3s ease;
+}
+header h1 span:hover {
+    background-color: #005bc3;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-top: 1rem;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: bold;
+    color: #00a8cc;
+}
+
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00a8cc;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 1.8rem; /* थोड़ा छोटा किया */
+        padding: 0.5rem;   /* कम padding */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 0.1rem 0; /* पहले 1rem था, अब कम किया */
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links li a {
+        font-size: 0.95rem;       /* थोड़ा छोटा और compact look */
+        line-height: 1.4;         /* कम height spacing */
+        letter-spacing: 0.5px;    /* tight and readable */
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Courses Section */
+.courses {
+    padding: 4rem 2rem;
+    background: #f4f8ff; /* Light blue pastel background */
+    text-align: center;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.courses h2 {
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    font-weight: bold;
+    color: #333; /* Dark text for focus */
+    margin-bottom: 2rem;
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-buttons button {
+    padding: 15px 30px;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Vibrant blue gradient */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.course-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Features Section */
+.features {
+    padding: clamp(0.7rem, 2vw, 1.2rem);
+    background: #ffffff; /* Clean white section */
+    text-align: center;
+    color: #555;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    font-size: clamp(1.7291665rem, 2vw, 1.2rem);
+    font-weight: bold;
+    color: #333; /* Darker heading */
+    margin-bottom: 2rem;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.features li {
+    margin: 15px 0;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+    color: #555;
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Light blue gradient */
+    text-align: center;
+    color: #333;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: clamp(1.9rem, 2vw, 1.2rem);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333; /* Darker heading */
+}
+
+.contact p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa; /* Light footer */
+    color: #555;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.footer p {    
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .semester-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .column button {
+        margin-top: 0 !important;
+    }
+}
